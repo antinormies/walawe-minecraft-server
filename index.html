@@ -6,50 +6,129 @@
 <title>Walawe Minecraft Server</title>
 <style>
   *{margin:0;padding:0;box-sizing:border-box}
-  body{font-family:system-ui,-apple-system,sans-serif;background:#1a1a2e;color:#e0e0e0;min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:2rem}
-  h1{font-size:2.5rem;margin-bottom:.5rem;color:#fff}
-  .subtitle{font-size:1.1rem;color:#a0a0c0;margin-bottom:2.5rem}
-  .card{background:#16213e;border-radius:12px;padding:2rem;max-width:600px;width:100%;margin-bottom:1.5rem}
-  .card h2{font-size:1.2rem;color:#e94560;margin-bottom:1rem}
-  .step{display:flex;gap:1rem;margin-bottom:1.2rem;align-items:flex-start}
-  .step:last-child{margin-bottom:0}
-  .num{background:#e94560;color:#fff;width:28px;height:28px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:700;flex-shrink:0;font-size:.9rem}
-  .step p{line-height:1.6}
-  code{background:#0f3460;padding:2px 6px;border-radius:4px;font-size:.9rem}
-  .address-box{background:#0f3460;border:2px solid #e94560;border-radius:8px;padding:1rem;text-align:center;font-size:1.4rem;font-weight:700;letter-spacing:1px;color:#fff;margin-top:1rem}
-  .note{background:#16213e;border-left:4px solid #e94560;padding:1rem 1.2rem;border-radius:0 8px 8px 0;font-size:.9rem;color:#c0c0d0}
-  a{color:#e94560;text-decoration:none}a:hover{text-decoration:underline}
-  footer{margin-top:2rem;color:#555;font-size:.8rem}
+  body{font-family:system-ui,-apple-system,'Segoe UI',sans-serif;background:#fafafa;color:#1a1a1a;min-height:100vh;line-height:1.7;padding:3rem 1.5rem}
+  .container{max-width:700px;margin:0 auto}
+  h1{font-size:2.2rem;font-weight:700;margin-bottom:.3rem;color:#111}
+  .subtitle{font-size:1rem;color:#666;margin-bottom:3rem}
+  .section{margin-bottom:2.5rem}
+  .section h2{font-size:1.15rem;font-weight:600;margin-bottom:1rem;color:#333;border-bottom:1px solid #e0e0e0;padding-bottom:.5rem}
+  .step{display:flex;gap:.85rem;margin-bottom:1rem;align-items:flex-start}
+  .num{background:#111;color:#fff;width:26px;height:26px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:600;flex-shrink:0;font-size:.85rem}
+  .step-content{flex:1}
+  .step-content p{margin-bottom:.3rem}
+  .step-content .detail{font-size:.9rem;color:#555;margin-top:.3rem}
+  code{background:#eee;padding:2px 7px;border-radius:4px;font-size:.88rem;font-family:'SF Mono',Consolas,monospace}
+  .server-address{background:#111;color:#fff;border-radius:8px;padding:1rem;text-align:center;font-size:1.35rem;font-weight:700;letter-spacing:.5px;font-family:'SF Mono',Consolas,monospace}
+  .note{background:#fff;border:1px solid #e0e0e0;border-radius:8px;padding:1rem 1.2rem;font-size:.9rem;color:#444}
+  .note strong{color:#111}
+  a{color:#111;text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:2px}
+  a:hover{color:#555}
+  .link-box{background:#fff;border:1px solid #e0e0e0;border-radius:8px;padding:1rem 1.2rem;margin-bottom:1rem;font-size:.95rem}
+  .link-box a{font-weight:600}
+  ul{margin:.5rem 0 0 1.2rem}
+  li{margin-bottom:.3rem;font-size:.95rem}
+  .divider{border:none;border-top:1px solid #e0e0e0;margin:2.5rem 0}
+  footer{margin-top:3rem;color:#999;font-size:.8rem;text-align:center}
 </style>
 </head>
 <body>
 
-<h1>Walawe Minecraft</h1>
-<p class="subtitle">Vanilla Java Edition 1.21.11 &mdash; Survival</p>
+<div class="container">
 
-<div class="card">
-  <h2>How to Join</h2>
-  <div class="step">
-    <div class="num">1</div>
-    <p>Install <a href="https://modrinth.com/mod/modflared" target="_blank">Modflared</a> mod in your Minecraft launcher (Fabric or Forge).</p>
+  <h1>Walawe Minecraft</h1>
+  <p class="subtitle">Vanilla Java Edition 1.21.11 &mdash; Survival &mdash; 10 Players</p>
+
+  <!-- Server address -->
+  <div class="section">
+    <div class="server-address">mc.walawe.fun</div>
   </div>
-  <div class="step">
-    <div class="num">2</div>
-    <p>Open Minecraft, go to <strong>Multiplayer &rarr; Add Server</strong>.</p>
+
+  <!-- Requirements -->
+  <div class="section">
+    <h2>Requirements</h2>
+    <ul>
+      <li>Minecraft <strong>Java Edition 1.21.11</strong></li>
+      <li>A <strong>paid</strong> Minecraft account (online-mode is on)</li>
+      <li>The <strong>Modflared</strong> mod installed</li>
+    </ul>
   </div>
-  <div class="step">
-    <div class="num">3</div>
-    <p>Paste the server address below and hit Done.</p>
+
+  <hr class="divider">
+
+  <!-- Install Modflared -->
+  <div class="section">
+    <h2>Step 1 &mdash; Install Modflared</h2>
+    <p style="margin-bottom:1rem">Modflared is a client mod that lets you connect to Cloudflare-tunneled servers. You only need to install it once.</p>
+
+    <div class="link-box">
+      Download Modflared from: <a href="https://modrinth.com/mod/modflared" target="_blank">modrinth.com/mod/modflared</a>
+    </div>
+
+    <p><strong>If you use a modded launcher (Prism, ATLauncher, etc.):</strong></p>
+    <ul>
+      <li>Download the Modflared <code>.jar</code> file from the link above</li>
+      <li>Drop it into your instance's <code>mods/</code> folder</li>
+      <li>Make sure you have <strong>Fabric</strong> or <strong>Forge</strong> (check Modflared's page for which loader it requires)</li>
+    </ul>
+
+    <p style="margin-top:1rem"><strong>If you use the official Minecraft launcher:</strong></p>
+    <ul>
+      <li>You'll need to create a modded profile &mdash; consider using <a href="https://modrinth.com/app" target="_blank">Modrinth App</a> or <a href="https://prismlauncher.org" target="_blank">Prism Launcher</a> instead, they make modding much easier</li>
+      <li>Both are free and support dragging &amp; dropping mod files into your game</li>
+    </ul>
   </div>
+
+  <hr class="divider">
+
+  <!-- Add server -->
+  <div class="section">
+    <h2>Step 2 &mdash; Add the Server</h2>
+    <div class="step">
+      <div class="num">1</div>
+      <div class="step-content">
+        <p>Open Minecraft with the Modflared mod loaded</p>
+        <p class="detail">You should see Modflared in the bottom-left corner of the main menu if it's installed correctly</p>
+      </div>
+    </div>
+    <div class="step">
+      <div class="num">2</div>
+      <div class="step-content">
+        <p>Go to <strong>Multiplayer</strong> &rarr; <strong>Add Server</strong></p>
+      </div>
+    </div>
+    <div class="step">
+      <div class="num">3</div>
+      <div class="step-content">
+        <p>Paste <code>mc.walawe.fun</code> as the server address</p>
+      </div>
+    </div>
+    <div class="step">
+      <div class="num">4</div>
+      <div class="step-content">
+        <p>Click <strong>Done</strong>, then <strong>Join Server</strong></p>
+        <p class="detail">Modflared handles the Cloudflare tunnel automatically &mdash; no terminal or extra config needed</p>
+      </div>
+    </div>
+  </div>
+
+  <hr class="divider">
+
+  <!-- Troubleshooting -->
+  <div class="section">
+    <h2>Troubleshooting</h2>
+    <div class="note">
+      <ul>
+        <li><strong>Can't connect?</strong> &mdash; Make sure Modflared is actually installed. Check the mods folder or look for it on the main menu</li>
+        <li><strong>Wrong version?</strong> &mdash; Everyone must run exactly <strong>1.21.11</strong>. Newer clients can't join an older server</li>
+        <li><strong>TLauncher / cracked client?</strong> &mdash; This server requires a paid account. Free/cracked clients won't work</li>
+        <li><strong>Modflared not showing up?</strong> &mdash; Make sure you downloaded the version matching your mod loader (Fabric / Forge) and Minecraft version</li>
+      </ul>
+    </div>
+  </div>
+
+  <footer>&copy; 2026 Walawe</footer>
+
 </div>
-
-<div class="address-box">mc.walawe.fun</div>
-
-<div class="note" style="max-width:600px;margin-top:1.5rem">
-  <strong>Requirements:</strong> Minecraft Java Edition 1.21.11 &bull; Paid account &bull; Modflared mod installed
-</div>
-
-<footer>&copy; 2026 Walawe</footer>
 
 </body>
 </html>
