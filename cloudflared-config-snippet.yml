@@ -1,0 +1,22 @@
+# Add this rule to your tunnel's config.yml (only if your tunnel is managed by
+# a local config file instead of the Cloudflare dashboard).
+#
+# Typical location: /etc/cloudflared/config.yml
+# After adding the rule below, run:
+#   cloudflared tunnel route dns YOUR_TUNNEL_NAME mc.walawe.fun
+#   sudo systemctl restart cloudflared
+#
+# The catch-all rule must stay LAST in the list.
+
+tunnel: YOUR_TUNNEL_NAME     # <-- your tunnel UUID or name
+credentials-file: /etc/cloudflared/YOUR_TUNNEL_ID.json   # <-- adjust path
+
+ingress:
+  # ... your existing HTTP rules stay here ...
+
+  # --- Minecraft (Java, TCP) ---
+  - hostname: mc.walawe.fun
+    service: tcp://localhost:25565
+
+  # ... your existing catch-all stays LAST, e.g.:
+  - service: http_status:404

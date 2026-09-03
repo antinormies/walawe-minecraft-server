@@ -1,0 +1,14 @@
+# Minecraft server runtime
+world/
+logs/
+cache/
+crash-reports/
+
+# Java runtime & libraries (too large for git)
+jre/
+libraries/
+versions/
+server.jar
+
+# OS
+.DS_Store

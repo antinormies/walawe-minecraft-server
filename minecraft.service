@@ -1,0 +1,31 @@
+# systemd unit for the Minecraft server (vanilla 1.21.11).
+#
+# Install on the VPS as root:
+#   sudo cp minecraft.service /etc/systemd/system/minecraft.service
+#   sudo systemctl daemon-reload
+#   sudo systemctl enable --now minecraft
+#
+# Logs:   journalctl -u minecraft -f
+# Stop:   sudo systemctl stop minecraft        (saves the world, graceful)
+# Start:  sudo systemctl start minecraft
+#
+# If the VPS has less than ~4 GB of RAM, lower it here (e.g. 2048M).
+
+[Unit]
+Description=Minecraft vanilla server 1.21.11
+After=network.target
+
+[Service]
+Type=simple
+# CHANGE THIS to the real path on your VPS, e.g. /opt/minecraft-server
+WorkingDirectory=/opt/minecraft-server
+ExecStart=/opt/minecraft-server/start.sh
+Environment=MC_RAM=3072M
+Restart=on-failure
+RestartSec=10
+# Run as a dedicated non-root user if you created one (recommended):
+# User=minecraft
+# Group=minecraft
+
+[Install]
+WantedBy=multi-user.target
